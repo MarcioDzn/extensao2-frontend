@@ -1,10 +1,25 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
+import { QueryClientProvider } from '@tanstack/react-query'
+
 import './index.css'
-import App from './App.tsx'
+import { queryClient } from './lib/QueryClient.ts'
+import { TemaCard } from './componentes/cards/TemaCard.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+    <QueryClientProvider client={queryClient}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Navigate to="/teste" replace />} />
+
+          <Route
+            path="/teste"
+            element={<TemaCard title={"a"}/>}
+          />
+        </Routes>
+      </BrowserRouter>
+    </QueryClientProvider>
   </StrictMode>,
 )
