@@ -1,12 +1,11 @@
 type Props = {
-    id: number,
     title: string
     teacher: string
     course: string
     field: string
 }
 
-export function TemaCard({ id, title, teacher, course, field }: Props) {
+export function TemaCard({ title, teacher, course, field }: Props) {
     return (
         <div className="grid grid-cols-4 gap-4 bg-white p-8 text-primary">
             <div className="flex items-center max-w-[70%] min-w-0">
