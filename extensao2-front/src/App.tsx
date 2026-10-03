@@ -1,14 +1,11 @@
 import './App.css'
-import TemaList from './componentes/cards/TemaList'
-import { temas } from './mocks/tema'
+import TemaListPage from './pages/TemaListPage'
 
 function App() {
 
   return (
     <>
-      <TemaList 
-        temas={temas}
-      />
+      <TemaListPage />
     </>
   )
 }
