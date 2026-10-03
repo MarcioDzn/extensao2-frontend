@@ -7,7 +7,7 @@ type Props = {
 
 export function TemaCard({ title, teacher, course, field }: Props) {
     return (
-        <div className="grid grid-cols-4 gap-4 bg-white p-8 text-primary">
+        <div className="grid grid-cols-4 gap-4 bg-white px-8 py-4 text-primary">
             <div className="flex items-center max-w-[70%] min-w-0">
                 <span className="block font-bold">{title}</span>
             </div>
