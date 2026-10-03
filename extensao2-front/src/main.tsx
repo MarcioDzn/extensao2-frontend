@@ -6,6 +6,7 @@ import { QueryClientProvider } from '@tanstack/react-query'
 import './index.css'
 import { queryClient } from './lib/QueryClient.ts'
 import { TemaCard } from './componentes/cards/TemaCard.tsx'
+import App from './App.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -16,7 +17,7 @@ createRoot(document.getElementById('root')!).render(
 
           <Route
             path="/teste"
-            element={<TemaCard title={"a"}/>}
+            element={<App />}
           />
         </Routes>
       </BrowserRouter>
